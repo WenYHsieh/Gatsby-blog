@@ -25,5 +25,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-notion-api",
+      options: {
+        token: "secret_gt992scyKMgdyzSQdwgexaELI0ajuEwrWERKLNQpp5f",
+        databaseId: "b78b1681d3b64ec3805db0a911c2f415",
+        propsToFrontmatter: true,
+        lowerTitleLevel: true,
+      },
+    },
   ],
 };
