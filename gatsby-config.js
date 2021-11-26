@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -28,8 +32,8 @@ module.exports = {
     {
       resolve: "gatsby-source-notion-api",
       options: {
-        token: "secret_gt992scyKMgdyzSQdwgexaELI0ajuEwrWERKLNQpp5f",
-        databaseId: "b78b1681d3b64ec3805db0a911c2f415",
+        token: process.env.NOTION_API_TOKEN,
+        databaseId: process.env.BLOG_ARTICLES_DB_ID,
         propsToFrontmatter: true,
         lowerTitleLevel: true,
       },
