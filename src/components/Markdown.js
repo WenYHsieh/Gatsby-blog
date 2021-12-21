@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import React, { memo } from 'react'
 
 const CodeBlock = ({ className, children }) => {
+  console.log('change user config')
   const language = className ? className.toString().split('-')[1] : ''
   return (
     <SyntaxHighlighter
