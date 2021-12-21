@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import ReactMarkdown from 'react-markdown'
+import Markdown from '../components/Markdown'
 
 const NavWrapper = styled.div``
 const NavContainer = styled.div`
@@ -65,9 +65,7 @@ const IndexPage = () => {
       <TestContainer>
         article list:
         {data.allNotion.edges.map((ele) => (
-          <ReactMarkdown source='### hello'>
-            {ele.node.markdownString}
-          </ReactMarkdown>
+          <Markdown children={ele.node.markdownString}></Markdown>
         ))}
       </TestContainer>
     </>
